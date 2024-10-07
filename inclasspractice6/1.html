@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication and Division</title>
+    <script>
+        function calculate() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+
+            if (num2 === 0) {
+                alert("Division by zero is not allowed!");
+                return;
+            }
+
+            let multiplication = num1 * num2;
+            let division = num1 / num2;
+
+            document.getElementById("multiplicationResult").innerText = "Multiplication: " + multiplication;
+            document.getElementById("divisionResult").innerText = "Division: " + division;
+        }
+    </script>
+</head>
+<body>
+    <h2>Multiplication and Division Calculator</h2>
+    
+    <label for="num1">Enter first number:</label>
+    <input type="number" id="num1"><br><br>
+    
+    <label for="num2">Enter second number:</label>
+    <input type="number" id="num2"><br><br>
+    
+    <button onclick="calculate()">Calculate</button>
+    
+    <p id="multiplicationResult"></p>
+    <p id="divisionResult"></p>
+</body>
+</html>
